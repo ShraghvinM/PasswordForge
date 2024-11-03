@@ -1,5 +1,6 @@
-# PasswordForge is a web-based password management application designed to address shortcomings in existing password management systems.
+# Password Manager, Generator and Reviewer
 
+PasswordForge is a web-based password management application designed to address shortcomings in existing password management systems.
 The purpose of the "PasswordForge" project is to address the growing security concerns associated with password management in the digital age.
 The objective is to provide users with a robust and user-friendly solution that has the capabilities in generating, storing, and evaluating passwords. Empower users to adopt secure password practices and enhance their overall digital security posture.
 
