@@ -11,7 +11,7 @@ The project aims to deliver a comprehensive solution that assists users to manag
 ## Key components and features:
 
 1.	User Registration and Log In
-2.	Password Storage for Individual Users
+2.	Password Storage for Individual Users on a cloud database
 3.	Password Managing using CRUD
 4.	Password Strength Evaluation
 5.	Password Generator 
