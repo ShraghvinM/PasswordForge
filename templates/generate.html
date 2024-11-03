@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>PasswordForge</title>
+    <link rel="icon" href="static\plain_logo_circle.png" type="image/png">
+    <link rel="stylesheet" href="..\static\style_generate.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% if 'user' in session %}
+    <div id="navbar">
+        <div id="top_logo" class="enlarge">
+            <a href="/profile"><img id="top_logo_img" src="static/logo_symbol_text.png"></a>
+        </div>
+    </div>
+    {% else %}
+    <div id="navbar">
+        <div id="top_logo" class="enlarge">
+            <a href="/home"><img id="top_logo_img" src="static/logo_symbol_text.png"></a>
+        </div>
+    </div>
+    {% endif %}
+    <div id="Center_stuff">
+        <div id="text1">Generate your Password</div>
+        <br>
+        <form action="/generate_pass" method="POST">
+            <div id="field">
+                    <label for="password">Enter password</label>
+                    <br>
+                    <input type="text" name="password" id="password" placeholder="keyword">
+                    <br>
+                    <div style="display: flex; align-items: center; justify-content:space-evenly; flex-direction: row; width: 300px; height: auto;">
+                        <p class="p_inside_form">Length: </p>
+                        <input type="number" id="quantity" name="quantity" min="6" max="99" value="6" required>
+                    </div>
+                    <br>
+                    <div style="display: flex; align-items: center; justify-content:space-evenly; flex-direction: row; width: 270px; height: auto;">
+                        <p class="p_inside_form">Special Symbols: </p>   
+                        <select id="specialsymbol" name="specialsymbol">
+                            <option value="True">Yes</option>
+                            <option value="False">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div style="display: flex; flex-direction: row; width: 400px; justify-content: space-between; align-items: center;">
+                        <input type="submit" id="submit">
+                        <a href="/generate">
+                            <div id="clear_button">Clear</div>
+                        </a>
+                    </div>
+            </div>
+        </form>
+        <div id="marks">
+            <p>{{ password }}</p>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div>
+            <p>&copy; 2024 PasswordForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

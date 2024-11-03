@@ -1,0 +1,233 @@
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.enlarge {
+    transition: transform 0.2s ease;
+}
+.enlarge:hover {
+    transform: scale(1.1);
+}
+#top_logo_img {
+    height:76px;
+    width: auto;
+    padding-left: 5px;
+}
+#navbar {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 90.54%;
+    justify-content:space-between;
+}
+#top_logo {
+    display: inline-block;
+}
+#field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#field a {
+    text-decoration: none;
+}
+#field label{
+    visibility: hidden;
+}
+#Center_stuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#text1 {
+    color: black;
+    font-family: "DM Sans";
+    font-size: 48px;
+    font-weight: 700;
+    color: #79A23F;
+}
+#password {
+    background-color: #e1e1e1;
+    color: black;
+    font-family: "DM Mono";
+    font-size: 20px;
+    border-radius: 55px;
+    border: none;
+    height: 56px;
+    width: 400px;
+    padding: 0px 40px;
+}
+#password:valid {
+    border: none;
+}
+#quantity {
+    background-color: #e1e1e1;
+    color: black;
+    font-family: "DM Mono";
+    font-size: 20px;
+    border-radius: 55px;
+    border: none;
+    height: 45px;
+    width: 140px;
+    padding: 0px 40px;
+}
+.p_inside_form {
+    color: black;
+    font-family: "DM Sans";
+    font-weight: 700;
+    font-size: 18px;
+}
+#specialsymbol {
+    background-color: #e1e1e1;
+    color: black;
+    font-family: "DM Mono";
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    width: auto;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#submit {
+    color: white;
+    background-color: #6eab19;
+    border-radius: 55px;
+    border: none;
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 18px;
+    margin: 1px;
+    height: 45px;
+    width: 180px;
+}
+#submit:hover {
+    background-color: #5a9408;
+}
+#submit:active {
+    background-color: #5e9f02;
+    border: 1px solid #467700;
+    margin: 0px;
+}
+#clear_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #6eab19;
+    border-radius: 55px;
+    border: none;
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 18px;
+    margin: 1px;
+    height: 45px;
+    width: 180px;
+}
+#clear_button:hover {
+    background-color: #5a9408;
+}
+#clear_button:active {
+    background-color: #5e9f02;
+    border: 1px solid #467700;
+    margin: 0px;
+}
+#marks {
+    color: #000000;
+    font-size: 49px;
+    font-weight: 600;
+    font-family: "DM Sans";
+}
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+@keyframes color_bar {
+    to {
+        background-color: #FF0926;
+    }
+}
+.bar {
+    height: 70px;
+    width: 100%;
+    background-color: #000000;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+.bar:hover {
+    animation: color_bar 0.3s ease-out both;
+}
+.bar_scroller {
+    flex: none;
+    display: flex;
+    justify-content: space-around;
+    align-items:baseline;
+    animation: scroll 33s linear infinite;
+}
+@keyframes color_text {
+    to {
+        color: #000000;
+    }
+}
+.bar_text {
+    width: 50%;
+    color:#ffffff;
+    font-size: 32px;
+    font-family: "Syne";
+    font-weight: 800;
+}
+.bar_text:hover {
+    animation: color_text 0.5s ease-out both;
+}
+#tips {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 24px;
+    font-family: "DM Sans";
+    width: 928px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#list span{
+    font-weight: 600;
+}
+@keyframes dis{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-family: "DM Sans";
+    font-weight: 500;
+}

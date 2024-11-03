@@ -1,0 +1,242 @@
+a {
+    text-decoration: none;
+}
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+} 
+#top_logo_img {
+    height:76px;
+    width: auto;
+    padding-left: 5px;
+}
+.nav_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "DM Mono";
+    font-size: 13.5px;
+    font-weight: 500;
+    height: 38px;
+    width: 98px;
+}
+#navbar {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90.54%;
+    justify-content:space-between;
+}
+#top_logo {
+    display: inline-block;
+}
+#navbuttons {
+    display:inline-flex;
+    align-items: center;
+    justify-content: end;
+    align-items: end;
+}
+#login_button {
+    display: flex;
+    height: 38px;
+    width: 98px;
+    background-color: #E50D45;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#signup_button {
+    display: flex;
+    height: 38px;
+    width: 98px;
+    background-color: #79A23F;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.enlarge {
+    transition: transform 0.2s ease;
+}
+.enlarge:hover {
+    transform: scale(1.1);
+}
+.field {
+    background-color: #000000;
+    color: white;
+    font-family: "DM Mono";
+    font-size: 15px;
+    border-radius: 55px;
+    border: 2px solid darkgray;
+    height: 45px;
+    width: 300px;
+    padding: 0px 40px;
+}
+.field:valid {
+    background-color: #ffffff;
+    color: black;
+}
+#submit {
+    color: #ffffff;
+    background-color: #FF0926;
+    border-radius: 55px;
+    border: none;
+    font-family: "DM Sans";
+    font-weight: 800;
+    font-size: 16px;
+    margin: 1px;
+    height: 40px;
+    width: 170px;
+}
+#submit:hover {
+    color: #ffffff;
+    background-color: #d6011a;
+}
+#submit:active {
+    color: #ffffff;
+    background-color: #ac0014;
+    border: 1px solid #81000f;
+    margin: 0px;
+}
+#page_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#review_button {
+    color: #ffffff;
+    background-color: #FF0926;
+    border-radius: 55px;
+    border: none;
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 25px;
+    margin: 15px;
+    height: 65px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#review_button a {
+    color: #ffffff;
+}
+#generate_button {
+    color: #ffffff;
+    background-color: #79A23F;
+    border-radius: 55px;
+    border: none;
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 25px;
+    margin: 15px;
+    height: 60px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#generate_button a {
+    color: #ffffff;
+}
+.add_slot {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 97px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 30px;
+}
+.slot_text {
+    color: #ffffff;
+    font-family: 'DM Sans';
+    font-size: 'g0px';
+    font-weight: 600;
+}
+#specialsymbol {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "DM Mono";
+    border-radius: 10px;
+    border: 2px solid grey;
+    height: 30px;
+    width: 100px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 10px;
+}
+
+#saved_text {
+    font-size: 40px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    color: black;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.form {
+    width: 85%
+}
+.custom_div {
+    background-color: #000000;
+    height: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 50px;
+}
+.custom_div p{
+    font-family: 'DM Sans';
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.custom_div div{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.custom_div2 {
+    height: auto;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.custom_div2 p{
+    font-family: 'DM Sans';
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+}
+.thatone2 {
+    font-weight:900;
+    font-family: 'DM Sans';
+    font-size: 30px;
+    color: #000000;
+}
+.thatone {
+    font-weight:900;
+    font-size: 23px;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-family: "DM Sans";
+    font-weight: 500;
+}

@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>PasswordForge</title>
+    <link rel="icon" href="static\plain_logo_circle.png" type="image/png">
+    <link rel="stylesheet" href="..\static\style_review.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% if 'user' in session %}
+    <div id="navbar">
+        <div id="top_logo" class="enlarge">
+            <a href="/profile"><img id="top_logo_img" src="static/logo_symbol_text_red.png"></a>
+        </div>
+    </div>
+    {% else %}
+    <div id="navbar">
+        <div id="top_logo" class="enlarge">
+            <a href="/home"><img id="top_logo_img" src="static/logo_symbol_text_red.png"></a>
+        </div>
+    </div>
+    {% endif %}
+    <br>
+    <div id="Center_stuff">
+        <div id="text1" class="enlarge">Rate your Password</div>
+        <br>
+        <br>
+        <br>
+        <form action="/review_pass" method="POST">
+            <div id="field">
+                    <label for="password">Enter password</label>
+                    <br>
+                    <input type="text" name="password" id="password" placeholder="password">
+                    <br>
+                    <br>
+                    <input type="submit" id="submit">
+            </div>
+        </form>
+        <div id="marks">
+            <p>{{rating}} / 10</p>
+        </div>
+    </div>
+    <br>
+    <div class="bar">
+        <div class="bar_scroller">
+            <div class="bar_text">Ways you can improve your password</div>
+            <div
+                style="height: 10px; width: 10px; border-radius: 30px; background-color: #ffffff; margin-left: 30px; margin-right: 30px;">
+            </div>
+            <div class="bar_text">Ways you can improve your password</div>
+            <div
+                style="height: 10px; width: 10px; border-radius: 30px; background-color: #ffffff; margin-left: 30px; margin-right: 30px;">
+            </div>
+        </div>
+        <div class="bar_scroller">
+            <div class="bar_text">Ways you can improve your password</div>
+            <div
+                style="height: 10px; width: 10px; border-radius: 30px; background-color: #ffffff; margin-left: 30px; margin-right: 30px;">
+            </div>
+            <div class="bar_text">Ways you can improve your password</div>
+            <div
+                style="height: 10px; width: 10px; border-radius: 30px; background-color: #ffffff; margin-left: 30px; margin-right: 30px;">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="arrows">
+        <div class="arrow" id="arrow1"><img src="static/arrow_down.png"></div>
+        <div class="arrow" id="arrow2"><img src="static/arrow_down.png"></div>
+        <div class="arrow" id="arrow3"><img src="static/arrow_down.png"></div>
+    </div>
+    <div id="tips">
+        <ol id="list">
+            <li class="enlarge"> Use a <span>longer password</span>. Your password should be <span>at least six characters long</span>, although for extra security it should be even longer.</li>
+            <br>
+            <li class="enlarge"> Try to <span>include numbers, symbols, and both uppercase and lowercase letters</span>.</li>
+            <br>
+            <li class="enlarge"> <span>Avoid</span> using words that can be <span>found in the dictionary</span>. For example, <span>"running1" would be a weak password</span>.</li>
+            <br>
+            <li class="enlarge"> <span>Random passwords are the strongest</span>. If you're having trouble creating one, you can <span>use our “Password Generator” instead</span>.</li>
+            <br>
+        </ol>
+    </div>
+    <footer>
+        <div>
+            <p>&copy; 2024 PasswordForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

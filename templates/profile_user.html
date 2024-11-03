@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>PasswordForge</title>
+    <link rel="icon" href="static\plain_logo_circle.png" type="image/png">
+    <link rel="stylesheet" href="../static/style_profile.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {% if 'user' in session %}
+
+        <div id="navbar">
+            <div id="top_logo" class="enlarge">
+                <a href="/profile"><img id="top_logo_img" src="static/logo_symbol_text.png"></a>
+            </div>
+            <div id="navbuttons">
+                <a href="/logout" class="nav_link enlarge">
+                    <div id="login_button">Log Out</div>
+                </a>
+            </div>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%; height: auto;">
+            <p style="font-size: 40px; font-family: 'DM Sans'; font-weight: 700; color: black;">Welcome <span style="color: #FF0926;">{{ user }}</span></p>
+        </div>
+        <input type="hidden" id="user" name="user" value="{{ user }}">
+        <div id="page_buttons">
+            <div id="review_button" class="enlarge"><a href="/review">Rate</a></div>
+            <div id="generate_button" class="enlarge"><a href="/generate">Generate</a></div>
+        </div>
+        <div style="position: fixed; width: 100%; top: 85%;">
+            <a href="/profile">
+                <img src="static\refresh.png" style="height: 60px; width: auto; position: fixed; margin: 18px;" class="enlarge">
+            </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="width: 100%; display: flex; align-items: center;">
+            <img src="static\vault.png" style="height: 100px; width: auto; margin-left: 60px; margin-right: 60px;">
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <form action="/profile_add" method="POST"  class="form">
+                <input type="hidden" id="user" name="user" value="{{ user }}">
+                <div class="add_slot">
+                    <div><p class="slot_text">Add Password</p></div>
+                    <div style="width: 630px; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                        <input type="text" class="field" id="username" name="username" placeholder="Username" min_length="3" required>
+                        <input type="text" class="field" id="password" name="password" placeholder="Password" min_length="6" required>
+                    </div>
+                    <input type="submit" id="submit" value="Add">
+                </div>
+            </form>
+            {% if s1 == 'False' %}
+                <p style="color: #FF0926; font-family:'DM Sans'; font-weight: 600; font-size: 20px;">Error</p>
+            {% endif %}
+
+            <form action="/profile_delete" method="POST" class="form">
+                <input type="hidden" id="user" name="user" value="{{ user }}">
+                <div class="add_slot">
+                    <div><p class="slot_text">Delete Password</p></div>
+                    <div style="width: 630px; display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                        <input type="text" class="field" id="passid" name="passid" placeholder="Username" min_length="3" required>
+                    </div>
+                    <input type="submit" id="submit" value="Delete">
+                </div>
+            </form>
+            {% if s2 == 'False' %}
+                <p style="color: #FF0926; font-family:'DM Sans'; font-weight: 600; font-size: 20px;">Error</p>
+            {% endif %}
+
+            <form action="/profile_edit" method="POST"  class="form">
+                <input type="hidden" id="user" name="user" value="{{ user }}">
+                <div class="add_slot">
+                    <div><p class="slot_text">Edit Password</p></div>
+                    <div style="width: 630px; display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                        <input type="text" class="field" id="passid" name="passid" placeholder="Username" min_length="3" required>
+                        <input type="text" class="field" id="password" name="value" placeholder="New Password" min_length="6" required>
+                    </div>
+                    <input type="submit" id="submit" value="Edit">
+                </div>
+            </form>
+            {% if s3 == 'False' %}
+                <p style="color: #FF0926; font-family:'DM Sans'; font-weight: 600; font-size: 20px;">Error</p>
+            {% endif %}
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <p id="saved_text">Saved Passwords</p>
+        <div style="display: flex; justify-content: center;">
+            <div style="display: flex; justify-content: center; flex-direction: column; flex-wrap: wrap;">
+            {% if not passwords  %}
+                <div style="display: block; align-items: center; justify-content: center;">
+                    <p class="thatone2">No Saved Passwords</p>
+                </div>
+            {% else %}
+                <div class="custom_div2">
+                    <p>Username</p>
+                    <p>Password</p>
+                </div>
+                <br>
+                {% for i in passwords %}
+                    <div style="display: block;">
+                        <div class="custom_div">
+                            <div style="width: 50%; align-items: center; justify-content: center;">
+                                <p class="thatone">{{ i['name'] }}</p>
+                            </div>
+                            <div style="width: 50%; align-items: center; justify-content: center;">
+                                <p>{{ i['key'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    {% else %}
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; height: 100%; width: auto;">
+            <p style="font-family: 'DM Sans'; font-weight: 800; font-size: 45px;">UNAUTHORIZED ACCESS</p>
+        </div>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div>
+            <p>&copy; 2024 PasswordForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>PasswordForge</title>
+    <link rel="icon" href="static\plain_logo_circle.png" type="image/png">
+    <link rel="stylesheet" href="../static/style_login.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="top_logo" class="enlarge">
+            <a href="/home"><img id="top_logo_img" src="static/logo_symbol_text_blue.png"></a>
+        </div>
+        <div id="navbuttons">
+            <a href="/signup" class="nav_link enlarge">
+                <div id="signup_button">Sign Up</div>
+            </a>
+        </div>
+    </div>
+    <br>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        <div id="account_details">
+            <div id="details_gif">
+                <img src="static/generator_pic.gif">
+            </div>
+            <div id="details_part">
+                <p id="logintext">Log In</p>
+                <form action="/login_user" method="POST">
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 30px;">
+                        <input type="email" placeholder="E-mail" name="email" id="email" class="field" required>
+                        <br>
+                        <input type="password" placeholder="Password" name="password" id="password" class="field" required>
+                        <br>
+                        <br>
+                        <input type="submit" id="submit" value="Log In">
+                    </div>
+                </form>
+                {% if auth == 0 %}
+                    <p style="color: white; font-family:'DM Sans'; font-weight: 600; font-size: 20px;">Account does not exist</p>
+                {% elif auth == 1 %}
+                    <p style="color: white; font-family:'DM Sans'; font-weight: 600; font-size: 20px;">Invalid password</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div>
+            <p>&copy; 2024 PasswordForge. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,431 @@
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+} 
+#top_logo_img {
+    height:76px;
+    width: auto;
+    padding-left: 5px;
+}
+.nav_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "DM Mono";
+    font-size: 13.5px;
+    font-weight: 500;
+    height: 38px;
+    width: 98px;
+}
+#navbar {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90.54%;
+    justify-content:space-between;
+}
+#top_logo {
+    display: inline-block;
+}
+#navbuttons {
+    display:inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 240px;
+}
+#login_button {
+    display: flex;
+    height: 38px;
+    width: 98px;
+    background-color: #000000;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#signup_button {
+    display: flex;
+    height: 38px;
+    width: 98px;
+    background-color: #FF0926;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    justify-self:right;
+    margin-left: 30px;
+}
+@keyframes breathe {
+    0%{ transform: scale(1, 1)}
+    25%{ transform: scale(0.8, 1.2)}
+    50%{ transform: scale(1, 1)}
+    75%{ transform: scale(1.3, 0.8)}
+    100%{ transform: scale(1, 1)}
+}
+#ATTACKER {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#red_waves {
+    position: absolute;
+    top: 110px;
+    left: 460px;
+    animation: breathe infinite linear 33s;
+}
+
+#red_stuff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#red_stuff a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "DM Mono";
+    font-size: 21px;
+    font-weight: 500;
+}
+#red_waves_content {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    width: 656px;
+}
+#red_waves img {
+    height: 580px;
+    width: auto;
+}
+#text_attacker1 {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 36;
+    color: #000000;
+    margin-bottom: 5px;
+}
+#text_attacker2 {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 36;
+    color: #000000;
+}
+#text_attacker2 span{
+    margin: 5px;
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    color: #ffffff;
+    background-color: #FF0926;
+}
+#button_attacker {
+    display: flex;
+    background-color: #FF0926;
+    height: 66px;
+    width: 345px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+.bar {
+    height: 70px;
+    width: 100%;
+    background-color: #000000;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+.bar_scroller {
+    flex: none;
+    display: flex;
+    justify-content: space-around;
+    align-items:baseline;
+    animation: scroll 10s linear infinite;
+}
+.bar_text {
+    width: 50%;
+    color:#ffffff;
+    font-size: 30px;
+    font-family: "Syne";
+    font-weight: 800;
+}
+#green_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#text_security {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 36;
+    color: #000000;
+}
+#text_security span{
+    margin: 5px;
+    padding-top: 1px;
+    padding-right: 3px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    color: #ffffff;
+    background-color: #79A23F;
+}
+.enforce {
+    height: 370px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.enforce_now {
+    display: flex;
+    font-size: 44px;
+    font-family: "DM Mono";
+    border: 5px solid #000000;
+    border-radius: 100px;
+    width: 433px;
+    height: 130px ;
+    justify-content: center;
+    align-items: center;
+}
+.enforce_now:hover {
+    animation: shadow-pop-bl 0.3s both;
+}
+.shadow-pop-bl {
+	animation: shadow-pop-bl 0.3s both;
+}
+@keyframes shadow-pop-bl {
+    0% {
+        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        box-shadow: -1px 1px #3e3e3e, -2px 2px #3e3e3e, -3px 3px #3e3e3e, -4px 4px #3e3e3e, -5px 5px #3e3e3e, -6px 6px #3e3e3e, -7px 7px #3e3e3e, -8px 8px #3e3e3e;
+        transform: translateX(10px) translateY(-10px);
+    }
+}
+.circles_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.circles_group div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: #000000;
+    margin: 7px;
+}
+@keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+}
+.circle {
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transition: background-color 0.3s ease;
+}
+  
+
+#row2 .circle,
+#row4 .circle,
+#row6 .circle,
+#row8 .circle,
+#row10 .circle,
+#row12 .circle {
+    animation-delay: 0.1s;
+}
+.enforce:hover .circle {
+    animation: vibrate-1 0.3s linear infinite both;
+    background-color: #79A23F;
+}
+.enforce .enforce_now .circle {
+    animation-name: none;
+}
+.enforce a {
+    text-decoration: none;
+    color: #000000;
+}
+#blue_waves {
+    position: absolute;
+}
+@keyframes breathe2 {
+    0%{ transform: scale(1, 1)}
+    25%{ transform: scale(0.8, 1.3)}
+    50%{ transform: scale(1, 1)}
+    75%{ transform: scale(1.35, 0.6)}
+    100%{ transform: scale(1, 1)}
+}
+#blue_waves img{
+    height: 505px;
+    width: 610px;
+    animation: breathe2 infinite ease-in-out 33s;
+}
+.shake-vertical {
+	animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@keyframes shake-vertical {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      transform: translateY(8px);
+    }
+    80% {
+      transform: translateY(6.4px);
+    }
+    90% {
+      transform: translateY(-6.4px);
+    }
+}
+.blue_text {
+    font-size: 96px;
+    font-family: "DM Sans";
+    font-weight: 500;
+    text-shadow: -3px 3px 7px #3e3e3e32;
+}
+.blue_text:hover {
+    animation: shake-vertical 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+#blue_stuff {
+    z-index: 1;
+}
+#SECURELY {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#place {
+    font-size: 32px;
+    font-family: "DM Sans";
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#blue_sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: "DM Sans";
+    font-weight: 700;
+    height: 54px;
+    width: 202px;
+    background-color: #58B2D3;
+    color: #ffffff;
+    padding: 5px;
+}
+#seg3text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.seg3 {
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.enlarge {
+    transition: transform 0.2s ease;
+}
+.enlarge:hover {
+    transform: scale(1.2);
+}
+#final {
+    display: flex;
+    margin: 55px;
+    flex-direction: column;
+    width: 302px;
+    height: auto;
+}
+#about_text {
+    font-size: 48px;
+    font-family: "DM Sans";
+    font-weight: 1000;
+    height: 46px;
+    width: 144px;
+}
+.details {
+    font-size: 24px;
+    font-family: "DM Mono";
+    font-weight: 500;
+    height: 69px;
+    width: auto;
+}
+#lang {
+    font-size: 24px;
+    font-family: "DM Sans";
+    font-weight: 500;
+    height: 69px;
+    width: auto;
+    color: #14a2d5;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-family: "DM Sans";
+    font-weight: 500;
+}

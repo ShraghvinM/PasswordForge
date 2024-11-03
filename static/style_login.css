@@ -1,0 +1,158 @@
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+} 
+#top_logo_img {
+    height:76px;
+    width: auto;
+    padding-left: 5px;
+}
+.nav_link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "DM Mono";
+    font-size: 13.5px;
+    font-weight: 500;
+    height: 38px;
+    width: 98px;
+}
+#navbar {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90.54%;
+    justify-content:space-between;
+}
+#top_logo {
+    display: inline-block;
+}
+#navbuttons {
+    display:inline-flex;
+    align-items: center;
+    justify-content: end;
+    align-items: end;
+}
+#login_button {
+    display: flex;
+    height: 38px;
+    width: 98px;
+    background-color: #79A23F;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#signup_button {
+    display: flex;
+    height: 38px;
+    width: 98px;
+    background-color: #79c2fa;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.enlarge {
+    transition: transform 0.2s ease;
+}
+.enlarge:hover {
+    transform: scale(1.1);
+}
+.field {
+    background-color: #000000;
+    color: white;
+    font-family: "DM Mono";
+    font-size: 15px;
+    border-radius: 55px;
+    border: 2px solid darkgray;
+    height: 45px;
+    width: 300px;
+    padding: 0px 40px;
+}
+.field:valid {
+    background-color: #ffffff;
+    color: black;
+}
+#submit {
+    color: #000000;
+    background-color: #79c2fa;
+    border-radius: 55px;
+    border: none;
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 17px;
+    margin: 1px;
+    height: 40px;
+    width: 130px;
+}
+#submit:hover {
+    color: #ffffff;
+    background-color: #1686db;
+}
+#submit:active {
+    color: #ffffff;
+    background-color: #206da9;
+    border: 1px solid #055089;
+    margin: 0px;
+}
+#account_details {
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 450px;
+    width: 1100px;
+    justify-content: center;
+    align-items: center;
+}
+#details_gif {
+    height: 420px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#details_gif img{
+    width: 500px;
+    height: auto;
+    border-radius: 55px;
+    flex-wrap: wrap;
+}
+#details_part {
+    height: 450px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#logintext {
+    color: #ffffff;
+    font-family: "DM Sans";
+    font-size: 27px;
+    font-weight: 600;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-family: "DM Sans";
+    font-weight: 500;
+}

@@ -1,0 +1,196 @@
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.enlarge {
+    transition: transform 0.2s ease;
+}
+.enlarge:hover {
+    transform: scale(1.1);
+}
+#top_logo_img {
+    height:76px;
+    width: auto;
+    padding-left: 5px;
+}
+#navbar {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 90.54%;
+    justify-content:space-between;
+}
+#top_logo {
+    display: inline-block;
+}
+#field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#field label{
+    visibility: hidden;
+}
+#Center_stuff {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#text1 {
+    color: black;
+    font-family: "DM Sans";
+    font-size: 48px;
+    font-weight: 700;
+    color: #FF0926;
+}
+#password {
+    background-color: #e1e1e1;
+    color: black;
+    font-family: "DM Mono";
+    font-size: 20px;
+    border-radius: 55px;
+    border: none;
+    height: 66px;
+    width: 628px;
+    padding: 0px 40px;
+}
+#password:valid {
+    border: none;
+}
+#submit {
+    color: white;
+    background-color: #FF0926;
+    border-radius: 55px;
+    border: none;
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 18px;
+    margin: 1px;
+    height: 45px;
+    width: 180px;
+}
+#submit:hover {
+    background-color: #d6011a;
+}
+#submit:active {
+    background-color: #ac0014;
+    border: 1px solid #81000f;
+    margin: 0px;
+}
+#marks {
+    font-size: 70px;
+    font-weight: 600;
+    font-family: "DM Sans";
+    margin: 10px;
+}
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+@keyframes color_bar {
+    to {
+        background-color: #FF0926;
+    }
+}
+.bar {
+    height: 70px;
+    width: 100%;
+    background-color: #000000;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+.bar:hover {
+    animation: color_bar 0.3s ease-out both;
+}
+.bar_scroller {
+    flex: none;
+    display: flex;
+    justify-content: space-around;
+    align-items:baseline;
+    animation: scroll 33s linear infinite;
+}
+@keyframes color_text {
+    to {
+        color: #000000;
+    }
+}
+.bar_text {
+    width: 50%;
+    color:#ffffff;
+    font-size: 32px;
+    font-family: "Syne";
+    font-weight: 800;
+}
+.bar_text:hover {
+    animation: color_text 0.5s ease-out both;
+}
+#tips {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 24px;
+    font-family: "DM Sans";
+    width: 928px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+#list span{
+    font-weight: 600;
+}
+@keyframes dis{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#arrows {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.arrow img {
+    animation: dis 2s ease infinite both;
+}
+#arrow2 img{
+    animation-delay: 0.7s;
+}
+#arrow3 img{
+    animation-delay: 0.8s;
+}
+.arrow img{
+    height: 35px;
+    width: auto;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-family: "DM Sans";
+    font-weight: 500;
+}
